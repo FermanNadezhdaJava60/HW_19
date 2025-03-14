@@ -29,6 +29,7 @@ function runCompanyTests() {
     "company.employees['Alice'].name",
     "company.employees['David'].computeSalary()",
     "company.employees['Eve'].computeSalary()",
+    "company.deleteEmployee(new Employee('Ivan')); !!company.employees.Ivan",
   ];
 
   const expectedResults = [
@@ -41,6 +42,7 @@ function runCompanyTests() {
     "Alice",
     7200,
     8400,
+    false,
   ];
 
   testframework("Company Tests", commonScript, scripts, expectedResults);
